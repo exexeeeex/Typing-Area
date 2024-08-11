@@ -1,0 +1,12 @@
+services:
+    typing:
+        hostname: typing
+        container_name: typing
+        image: typing
+        ports:
+            - 80:80
+        volumes:
+            - ../nginx/conf.dev.d/:/etc/nginx/conf.d/
+        build:
+            context: ../../
+            dockerfile: Dockerfile
