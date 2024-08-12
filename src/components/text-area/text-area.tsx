@@ -74,7 +74,7 @@ const TextArea = memo(() => {
 
     // Отключаем клавиши
     const disableButtons = (e: KeyboardEvent): void => {
-        if (e.code == 'Backspace' || e.code == 'Ctrl') {
+        if (e.code == 'Backspace' || e.ctrlKey) {
             e.stopPropagation();
             e.preventDefault();
         }
